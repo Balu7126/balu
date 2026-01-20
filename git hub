@@ -1,0 +1,162 @@
+git config --global user.email "abhishekawaradi01@gmail.com"
+git config --global user.name "abhishekawaradi"
+git config --global --list
+
+PROGRAM 01
+
+mkdir <folder-name>             
+cd <folder-name>                 
+git init                        
+nano file.txt                  
+git add file.txt                 
+git commit -m "added via commit" 
+
+PROGRAM 02
+
+mkdir <folder-name>
+cd <folder-name>
+git init
+git checkout -b feature-branch  
+nano file.txt
+git add file.txt
+git commit -m "added via commit"
+git checkout master            
+git merge feature-branch        
+
+PROGRAM 03
+
+mkdir <folder-name>
+cd <folder-name>
+git init
+git checkout -b feature-branch
+nano file.txt
+git add file.txt
+git stash push --staged
+git checkout master
+git stash apply 
+git remote add origin <repo-url>                    
+
+PROGRAM 04
+
+git clone <repository_url> 
+
+mkdir <folder-name2>
+cd <folder-name2>
+git init
+nano file.txt
+git add file.txt
+git commit -m "commit message"  
+git remote add origin https://github.com/username/repository.git
+git push origin master
+   
+
+PROGRAM 05
+
+git clone <repository_url>
+cd <repo-name>
+nano file.txt
+git add file.txt
+git commit -m "commit messsage"
+git checkout master
+git fetch origin                       
+git rebase origin/master                
+         
+
+PROGRAM 06
+
+mkdir <folder-name>
+cd <folder-name>
+git init
+git checkout -b feature-branch
+nano file.txt
+git add file.txt
+git commit -m "added via commit"
+git checkout master
+git merge feature-branch -m "Merge feature-branch into master"
+
+PROGRAM 07
+
+mkdir <folder-name>
+cd <folder-name>
+git init
+nano file.txt
+git add file.txt
+git commit -m "added via commit"
+git log --oneline
+git tag v1.0                       
+
+PROGRAM 08
+
+mkdir <folder-name>
+cd <folder-name>
+git init
+git checkout -b feature-branch
+nano file.txt
+git add file.txt
+git commit -m"commit message"
+nano file.txt
+git add file.txt
+git commit -m"2nd commit"
+....
+..... do same till how many commit are told to do
+git log --oneline
+git checkout master
+git cherry-pick <start-commit>^..<end-commit> 
+
+PROGRAM 09
+
+mkdir <folder-name>
+cd <folder-name>
+git init
+nano file.txt
+git add file.txt
+git commit -m "added via commit"
+git log --oneline     
+git show <commit id>  
+
+PROGRAM 10
+
+mkdir <folder-name>
+cd <folder-name>
+git init
+nano file.txt
+git add file.txt
+git commit -m"commit message"
+git log --oneline
+git show <commit-id>
+git log --author="author-name" --since="starting-date" --until="ending-date"    
+
+PROGRAM 11
+
+mkdir <folder-name>
+cd <folder-name>
+git init
+nano file.txt
+git add file.txt
+git commit -m "1st commit"
+nano file.txt
+git add file.txt
+git commit -m "2nd commit"
+nano file.txt
+git add file.txt
+git commit -m "3rd commit"
+nano file.txt
+git add file.txt
+git commit -m "4th commit"
+nano file.txt
+git add file.txt
+git commit -m "5th commit"
+git log -n 5
+
+
+
+PROGRAM 12
+
+mkdir <folder-name>
+cd <folder-name>
+git init
+nano file.txt
+git add file.txt
+git commit -m"commit message"
+git log --oneline
+git revert <commit-id>
